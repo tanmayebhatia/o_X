@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  o_X
 //
-//  Created by Tobin Bell on 6/28/16.
-//  Copyright © 2016 iX. All rights reserved.
-//
 
 import UIKit
 
