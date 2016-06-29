@@ -9,6 +9,7 @@ class BoardViewController: UIViewController {
 
     @IBOutlet weak var newGameButton: UIButton!
     // Create additional IBOutlets here.
+
     @IBOutlet weak var topview: UIView!
     
     @IBOutlet weak var newgame: UIButton!
@@ -30,6 +31,8 @@ class BoardViewController: UIViewController {
         print ("button \(sender.tag) pressed hi!")
     }
     // Create additional IBActions here.
-
+    var gameObject: OXGame = OXGame()
+    
+    
 }
 
