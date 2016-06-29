@@ -27,7 +27,7 @@ class BoardViewController: UIViewController {
     }
     
     @IBAction func buttonpress(sender: AnyObject) {
-        print ("button \(sender.tag) pressed")
+        print ("button \(sender.tag) pressed hi!")
     }
     // Create additional IBActions here.
 
