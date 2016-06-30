@@ -39,6 +39,7 @@ class OXGame {
     }
     
     func playMove(boardCell:Int) -> CellType {
+        //if board[boardCell] == CellType.empty{
         if (whoseTurn() == CellType.X){
             board[boardCell] = CellType.X
         }
@@ -47,6 +48,8 @@ class OXGame {
         }
         count += 1
         return board[boardCell]
+        //}
+        //return nil
     }
     
     func gameWon() -> Bool {
@@ -63,8 +66,8 @@ class OXGame {
             return true
         }
         //checks for diagonals
-        if ((board[0] != CellType.empty && board[0] == board[5] && board[5] == board[8]) ||
-            (board[2] != CellType.empty && board[2] == board[5] && board[5] == board[6])){
+        if ((board[0] != CellType.empty && board[0] == board[4] && board[4] == board[8]) ||
+            (board[2] != CellType.empty && board[2] == board[4] && board[4] == board[6])){
             return true
         }
         return false
@@ -74,7 +77,7 @@ class OXGame {
         if (gameWon()){
             return OXGameState.Won
         }
-        if(count > 9){
+        else if(count >= 9){
             return OXGameState.Tie
         }
         return OXGameState.inProgress
@@ -87,6 +90,6 @@ class OXGame {
             board[i] = CellType.empty
         }
         count = 0
-        
     }
 }
+

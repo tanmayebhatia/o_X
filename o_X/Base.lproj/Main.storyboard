@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjZ-BL-Onw" userLabel="Board">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjZ-BL-Onw" userLabel="boardView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o_X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTO-YT-WxB">
@@ -31,9 +31,6 @@
                                         <state key="normal" title="Logout">
                                             <color key="titleColor" red="0.9891231971664145" green="1" blue="0.9768021925282897" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="logoutbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rmM-a8-2Jw"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2N-6Y-M9g">
                                         <rect key="frame" x="258" y="37" width="91" height="30"/>
@@ -81,7 +78,7 @@
                                             <constraint firstAttribute="width" constant="45" id="aQS-II-aBr"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Usa-GW-R3r"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yFI-8H-CNV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoG-Ea-Hum" userLabel="tic2">
@@ -91,7 +88,7 @@
                                             <constraint firstAttribute="width" constant="45" id="PQ6-1t-Qrq"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1V-NS-uf0"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MmL-Ui-6D1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIh-L9-36K" userLabel="tic3">
@@ -101,7 +98,7 @@
                                             <constraint firstAttribute="width" constant="45" id="fOs-eT-O3s"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTq-GP-exM"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YRD-qP-NRR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6B-Ee-n2z" userLabel="tic5">
@@ -111,7 +108,7 @@
                                             <constraint firstAttribute="width" constant="45" id="tfD-Zo-x4H"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lwd-Fy-N1c"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kl8-Pp-WVm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugf-3C-FZR" userLabel="tic4">
@@ -121,7 +118,7 @@
                                             <constraint firstAttribute="width" constant="45" id="vFF-MM-72B"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OtF-Tb-qoY"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AxP-tc-KrL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-lF-Rvg" userLabel="tic9">
@@ -131,7 +128,7 @@
                                             <constraint firstAttribute="width" constant="45" id="nSC-Ky-yO0"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZO1-lt-JR5"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVa-8X-9YV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaL-OS-FQO" userLabel="tic8">
@@ -141,7 +138,7 @@
                                             <constraint firstAttribute="height" constant="45" id="f6C-QU-mpe"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4f-0a-YoW"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ha-Vb-Cib"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-Si-rWv" userLabel="tic7">
@@ -151,7 +148,7 @@
                                             <constraint firstAttribute="width" constant="45" id="TFm-zW-6cj"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmY-Tr-fbb"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aF7-qA-gHU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sr-NT-1G6" userLabel="tic6">
@@ -161,7 +158,7 @@
                                             <constraint firstAttribute="width" constant="45" id="rbs-rv-BdR"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="buttonpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcM-M8-mtV"/>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TLW-tJ-s9C"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmP-4m-3dU">
@@ -228,31 +225,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="newgame" destination="BmP-4m-3dU" id="vkk-8C-JVz"/>
-                        <outlet property="topview" destination="YjZ-BL-Onw" id="uLl-cg-QhQ"/>
+                        <outlet property="boardView" destination="8bC-Xf-vdC" id="L1R-Jh-wkV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="323.5" y="132.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5D3-EH-8Ut">
-            <objects>
-                <viewController id="KyO-nU-R6m" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WoX-mY-m92"/>
-                        <viewControllerLayoutGuide type="bottom" id="0vR-A1-lQY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gf7-yH-HkZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gih-jF-54Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="323" y="916"/>
+            <point key="canvasLocation" x="332.5" y="973.5"/>
         </scene>
     </scenes>
 </document>
