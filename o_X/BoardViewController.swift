@@ -8,10 +8,11 @@ class BoardViewController: UIViewController {
     //@IBOutlet weak var boardView: UIView!
     
     @IBOutlet weak var boardView: UIView!
+    @IBOutlet weak var newGameButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        newGameButton.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -40,14 +41,14 @@ class BoardViewController: UIViewController {
             presentViewController(alert, animated: true, completion: nil)
             
             print ("winner is \(game.whoseTurn().rawValue)")
-            restartGame()
+            newGameButton.hidden = false
         }
         else if(game.state() == .Tie){
             let alert = UIAlertController(title: "You Tied", message: "You Tied", preferredStyle: .Alert)
             let dismiss = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
             alert.addAction(dismiss)
             presentViewController(alert, animated: true, completion: nil)
-            restartGame()
+            newGameButton.hidden = false
         } else {
             game.state() == .inProgress
         }
@@ -69,6 +70,7 @@ class BoardViewController: UIViewController {
     
     @IBAction func newGameLabel(sender: UIButton) {
         restartGame()
+        newGameButton.hidden = true
         print("new game pressed")
     }
     

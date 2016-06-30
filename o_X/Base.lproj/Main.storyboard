@@ -164,6 +164,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmP-4m-3dU">
                                         <rect key="frame" x="152" y="585" width="71" height="30"/>
                                         <state key="normal" title="NewGame"/>
+                                        <connections>
+                                            <action selector="newGameLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F6a-fF-N8t"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11715907183499126" green="0.77998200261780104" blue="0.17781400910820841" alpha="1" colorSpace="calibratedRGB"/>
@@ -226,6 +229,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="boardView" destination="8bC-Xf-vdC" id="L1R-Jh-wkV"/>
+                        <outlet property="newGameButton" destination="BmP-4m-3dU" id="4sV-M2-QzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
