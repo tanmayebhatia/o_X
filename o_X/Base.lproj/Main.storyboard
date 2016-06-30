@@ -31,6 +31,9 @@
                                         <state key="normal" title="Logout">
                                             <color key="titleColor" red="0.9891231971664145" green="1" blue="0.9768021925282897" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yX-RJ-2SJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2N-6Y-M9g">
                                         <rect key="frame" x="258" y="37" width="91" height="30"/>

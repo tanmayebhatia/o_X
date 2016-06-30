@@ -16,6 +16,10 @@ class BoardViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func logoutButtonPressed(sender: AnyObject) {
+        let controller = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
+        let window = UIApplication.sharedApplication().keyWindow
+        window?.rootViewController = controller}
     
     @IBAction func moveButtonLabel(sender: UIButton) {
         
