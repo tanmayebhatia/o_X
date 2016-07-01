@@ -13,11 +13,16 @@ class UserController {
     static var sharedInstance = UserController()
     private var users: [User] = []
     var currentUser: User?
+    let data = NSUserDefaults.standardUserDefaults()
+    
     
     func register(email email: String, password: String, onCompletion: (User?, String?) -> Void){
         if ( password.characters.count >= 6){
             currentUser = User(email: email, password: password)
             users.append(currentUser!)
+            data.setObject(currentUser?.email, forKey: "CurrentUserEmail")
+            data.setObject(currentUser?.password, forKey: "CurrentUserPassword")
+            data.synchronize()
             onCompletion(currentUser, nil)
         }
         else {
