@@ -24,10 +24,10 @@ class BoardViewController: UIViewController {
     @IBAction func moveButtonLabel(sender: UIButton) {
         
         //print("button \(sender.tag) pressed")
-        sender.enabled = false
+        sender.userInteractionEnabled = false
         let game = OXGameController.sharedInstance.getCurrentGame()
-        let cell = game.playMove(sender.tag-1)
-        
+        let cell = game.playMove(sender.tag)
+         updateUI()
         
         sender.setTitle(cell.rawValue, forState: .Normal)
         
@@ -65,7 +65,7 @@ class BoardViewController: UIViewController {
             if let button = subview as? UIButton {
                 if (button.tag >= 0) {
                     button.setTitle("", forState: .Normal)
-                    button.enabled = true
+                    button.userInteractionEnabled = true
                 }
             }
             print("restarted game")
@@ -78,5 +78,23 @@ class BoardViewController: UIViewController {
         print("new game pressed")
     }
     
+
+
+func updateUI() {
+    
+    let currentGame = OXGameController.sharedInstance.getCurrentGame()
+    
+    print(currentGame.board[0])
+    
+    for case let button as UIButton in boardView.subviews {
+        button.setTitle(currentGame.board[button.tag].rawValue, forState: .Normal)
+        if currentGame.board[button.tag] != .empty {
+            button.userInteractionEnabled = false
+        }
+    }
+    
 }
+
+}
+
 

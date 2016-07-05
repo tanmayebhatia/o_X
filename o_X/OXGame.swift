@@ -21,7 +21,10 @@ class OXGame {
         case Won
     }
     
-    private var board = [CellType](count: 9, repeatedValue: CellType.empty)
+    var ID: Int = 0
+    var host: String = ""
+    
+    var board = [CellType](count: 9, repeatedValue: CellType.empty)
     private var startType:CellType = CellType.X
     var count:Int = 0
     
@@ -50,6 +53,20 @@ class OXGame {
         return board[boardCell]
         //}
         //return nil
+    }
+    
+    func serialiseBoard() -> String {
+        var string: String = ""
+        for cell in board {
+            if cell == .X {
+                string.append("x" as Character)
+            } else if cell == .O {
+                string.append("o" as Character)
+            } else {
+                string.append("_" as Character)
+            }
+        }
+        return string
     }
     
     func gameWon() -> Bool {
@@ -85,11 +102,33 @@ class OXGame {
     }
     
     func reset() -> Void {
-        var i:Int
-        for (i = 0; i < board.count; i += 1){
-            board[i] = CellType.empty
-        }
+        board = [CellType](count: 9, repeatedValue: .empty)
         count = 0
     }
-}
+    
+    func deserialiseBoard ( boardString:String) -> [CellType]
+    {
+     
+        var board = [CellType]()
+        for char in boardString.characters {
+            if char == "x" {
+                board.append(.X)
+            }
+            else if char == "o" {
+                board.append(.O)
+            }
+            else {
+                board.append(.empty)
+            }
+        }
+        return board
+        
+    }
+  
 
+    
+
+
+    
+    
+}

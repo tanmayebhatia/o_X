@@ -30,24 +30,31 @@ class UserController {
         }
     }
     
-    func login(email email: String, password: String, onCompletion: (User?, String?) -> Void) {
-        for user in users {
-            if (user.email == email) {
-                if (user.password == password) {
-                    currentUser = user
-                    onCompletion(user, nil)
-                } else {
-                    onCompletion(nil, "Incorrect password.")
-                }
-                
+ 
+    
+    func login(email email: String, password: String, onCompletion: (User?, String?) -> Void){
+        for user in users{
+            if (user.email == email && user.password == password){
+                currentUser = user
+                data.setObject(currentUser?.email, forKey: "currentUserEmail")
+                data.setObject(currentUser?.password, forKey: "currentUserPassword")
+                data.synchronize()
+                onCompletion(user, nil)
                 return
             }
         }
-        onCompletion(nil, "Email not registered.")
+        
+        onCompletion(nil, "Your username or password is incorrect.”")
     }
     
     func logout(onCompletion onCompletion: (String?) -> Void) {
         currentUser = nil
-        onCompletion("Bye Bye")
+        data.removeObjectForKey("currentUserEmail")
+        data.removeObjectForKey("currentUserPassword")
+        data.synchronize()
+        onCompletion("Logout Successful!")
     }
+    
 }
+
+

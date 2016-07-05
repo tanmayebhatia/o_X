@@ -13,8 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        return true
-  let data = NSUserDefaults.standardUserDefaults()
+
+        let data = NSUserDefaults.standardUserDefaults()
         if let email = data.stringForKey("CurrentUserEmail"), password = data.stringForKey("CurrentUserPassword"){
             UserController.sharedInstance.register(email:email, password: password, onCompletion: { (user,message) in
                 if user != nil {
@@ -23,7 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.rootViewController = viewController
                 }
             })
-    }
+        }
+        
+        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
