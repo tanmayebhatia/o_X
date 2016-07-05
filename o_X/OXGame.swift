@@ -19,6 +19,8 @@ class OXGame {
         case inProgress
         case Tie
         case Won
+        case open
+        case abandoned
     }
     
     var ID: Int = 0

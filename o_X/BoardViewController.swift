@@ -10,9 +10,13 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var boardView: UIView!
     @IBOutlet weak var newGameButton: UIButton!
     
+    var networkStatus: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        newGameButton.hidden = true
+        if !networkStatus {
+            newGameButton.hidden = true
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -45,14 +49,19 @@ class BoardViewController: UIViewController {
             presentViewController(alert, animated: true, completion: nil)
             
             print ("winner is \(game.whoseTurn().rawValue)")
-            newGameButton.hidden = false
+            
+            if !networkStatus {
+                newGameButton.hidden = false
+            }
         }
         else if(game.state() == .Tie){
             let alert = UIAlertController(title: "You Tied", message: "You Tied", preferredStyle: .Alert)
             let dismiss = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
             alert.addAction(dismiss)
             presentViewController(alert, animated: true, completion: nil)
-            newGameButton.hidden = false
+            if !networkStatus {
+                newGameButton.hidden = false
+            }
         } else {
             game.state() == .inProgress
         }
@@ -94,7 +103,15 @@ func updateUI() {
     }
     
 }
-
+    
+    @IBOutlet weak var networkStatusLabel: UILabel!
+    func setNetworkLabelStatus() {
+        if networkStatus {
+            networkStatusLabel.text = "Network mode"
+        }
+        
+    }
+    
 }
 
 

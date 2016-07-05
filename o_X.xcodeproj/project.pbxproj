@@ -20,6 +20,7 @@
 		1828A1411D2559140090EA71 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828A1401D2559140090EA71 /* RegisterViewController.swift */; };
 		188E21301D23D039000EB991 /* OXGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E212F1D23D039000EB991 /* OXGame.swift */; };
 		18F982A51D24652C0026FB7E /* OXGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F982A41D24652C0026FB7E /* OXGameController.swift */; };
+		4F474753544DC91EE4113CD6 /* Pods_o_X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A1CB0E54BA60ECAC184793 /* Pods_o_X.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,9 @@
 		1828A1401D2559140090EA71 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		188E212F1D23D039000EB991 /* OXGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OXGame.swift; sourceTree = "<group>"; };
 		18F982A41D24652C0026FB7E /* OXGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OXGameController.swift; sourceTree = "<group>"; };
+		20A1CB0E54BA60ECAC184793 /* Pods_o_X.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_o_X.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F92B3DE0360334C6D3C23C5 /* Pods-o_X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-o_X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-o_X/Pods-o_X.debug.xcconfig"; sourceTree = "<group>"; };
+		F1936191070C19ED7E35D263 /* Pods-o_X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-o_X.release.xcconfig"; path = "Pods/Target Support Files/Pods-o_X/Pods-o_X.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F474753544DC91EE4113CD6 /* Pods_o_X.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 			children = (
 				02F782C41D22966600E3BC29 /* o_X */,
 				02F782C31D22966500E3BC29 /* Products */,
+				5C2E520CE9BBBEA2AFE4BB0D /* Pods */,
+				3D592613BF62FE382240C896 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +103,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		3D592613BF62FE382240C896 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20A1CB0E54BA60ECAC184793 /* Pods_o_X.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C2E520CE9BBBEA2AFE4BB0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F92B3DE0360334C6D3C23C5 /* Pods-o_X.debug.xcconfig */,
+				F1936191070C19ED7E35D263 /* Pods-o_X.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02F782D41D22966600E3BC29 /* Build configuration list for PBXNativeTarget "o_X" */;
 			buildPhases = (
+				D3A8D766149D5C1CDD21639D /* [CP] Check Pods Manifest.lock */,
 				02F782BE1D22966500E3BC29 /* Sources */,
 				02F782BF1D22966500E3BC29 /* Frameworks */,
 				02F782C01D22966500E3BC29 /* Resources */,
+				F3C11971B0252745C7B96AE4 /* [CP] Embed Pods Frameworks */,
+				1684A295AA1621850B865F34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +189,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1684A295AA1621850B865F34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-o_X/Pods-o_X-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A8D766149D5C1CDD21639D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3C11971B0252745C7B96AE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-o_X/Pods-o_X-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02F782BE1D22966500E3BC29 /* Sources */ = {
@@ -287,6 +362,7 @@
 		};
 		02F782D51D22966600E3BC29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F92B3DE0360334C6D3C23C5 /* Pods-o_X.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = o_X/Info.plist;
@@ -298,6 +374,7 @@
 		};
 		02F782D61D22966600E3BC29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1936191070C19ED7E35D263 /* Pods-o_X.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = o_X/Info.plist;

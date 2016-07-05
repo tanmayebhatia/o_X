@@ -31,6 +31,7 @@ class NetworkGamesTableViewController: UITableViewController {
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,6 +45,14 @@ class NetworkGamesTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
+    }
+    @IBAction func plusButtonTapped(sender: AnyObject) {
+        performSegueWithIdentifier("networkGame", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let viewController = segue.destinationViewController as? BoardViewController
+        viewController?.networkStatus = true
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,6 +70,8 @@ class NetworkGamesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print ("Entered game")
     }
+    
+
 
 
     /*
